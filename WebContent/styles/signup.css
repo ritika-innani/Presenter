@@ -1,0 +1,141 @@
+@CHARSET "ISO-8859-1";
+
+/*signup page*/
+
+#signup-page .first{
+	background-color:#e8ebed;
+	border-bottom: solid 1px #e9f0f3;
+    padding: 72px 0;
+    text-align: center;
+}
+
+#signup-page .main-signup-form{
+	padding:0 60px 60px 60px;
+	background-color:#fff;
+	text-align:left;
+	border-radius:5px;
+}
+
+#signup-page form .row{
+	padding: 0 9px;
+}
+
+#signup-page .row .row{
+	width: auto;
+    max-width: none;
+    margin: 0 -15px;
+}
+
+#signup-page hr{
+	border-color: #f4fcff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#signup-page .trial-banner{
+	margin: 0 -70px 40px;
+	background-color: #FF4081;
+	border-radius: 5px 5px 0 0;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+    color: #fff;
+}
+
+.form-division .heading{
+	color: #384047;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.form-division .form-step{
+    border: solid 2px #FF4081;
+    color: #FF4081;
+    height: 30px;
+    line-height: 26px;
+    margin: -2px 10px 0 0px;
+    position: relative;
+    text-align: center;
+    width: 30px;
+    display: inline-block;
+    border-radius: 100px;
+
+}	
+
+.form-division .billing-option.selected{
+	background:rgba(255,64,129,0.7);
+    border-radius: 5px;
+}
+
+.form-division .billing-option{
+	background:rgba(255,255,255,0.1);
+	border: none;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    outline: none;
+    padding: 12px 15px;
+	border-radius:30px;
+}
+
+.form-division .billing-option.selected label{
+	color:#fff;
+}
+
+.form-division .billing-option.selected span{
+	color:#fff;
+}
+
+.form-division .billing-option span{
+	color:#a6b0b7;
+}
+
+.form-division .billing-option label{
+	color: #384047;
+	cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+    position: relative;
+    vertical-align: middle;
+	top:0;
+	left:0;
+}
+
+.form-division label{
+	color: #a6b0b7;
+    display: inline-block;
+    top: 12px;
+    left: 28px;
+}
+
+.form-division .billing-option input[type=radio]{
+	cursor: pointer;
+    margin-right: 8px;
+	position: relative;
+	vertical-align: middle;
+}
+
+.form-division p{
+	margin-top: 0;
+    font-size: 14px;
+    color: #576366;
+	text-align: left;
+    display: block;
+}
+
+#signup-page .form-footer .button{
+	width:40%;
+}
+
+#signup-page .form-footer p{
+	font-size:12px;
+	padding-top:30px;
+	line-height:1.5;
+	font-weight:600;
+}
+
+form .error{
+	color : red;
+}

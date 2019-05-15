@@ -1,0 +1,531 @@
+@CHARSET "ISO-8859-1";
+
+*{
+	font-family:sans-serif;
+}
+
+html{
+	width:100%;
+	height:100%;
+	font-family:serif;
+}
+body{
+	width:100%;
+	height:100%;
+}  
+form{
+	height:100%;
+	width:100%;
+}
+	
+/*----product page header----*/
+#presenter-view{
+	display:none;
+	height:768px;
+	width:1366px;
+}
+
+#editor-view{
+	height:100%;
+	width:100%;
+}
+
+#document-header{
+	width:100%;
+	background : #fafafa;
+	position:fixed;
+	height:67px;
+	top:0;
+	left:0;
+	z-index:2;
+    border-bottom: 1px solid transparent;
+	box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.docs-titlebar{
+	max-height : 35px;
+	position:relative;
+}
+
+.logo{
+	display:inline-block;
+	position:relative;
+	top:2px;
+}
+
+.logo span{
+	font-size:32px;
+}
+
+.docs-title-container{
+	display:inline-block;
+	padding:5px;
+	position:relative;
+	top:-5px;
+}
+
+.docs-title-container input{
+	font-size:16px;
+	padding:5px;
+	border:1px solid transparent;
+	background:none;
+	width:230px;
+}
+
+.docs-title-input:hover{
+	border:1px solid #eee;
+}
+
+/*********** logout button ****************/
+
+.profile-button{
+	position: absolute;
+    right: 15px;
+    display:inline-block;
+    vertical-align: middle;
+    height: 35px;
+    line-height: 35px;
+}
+
+.profile-button a{
+	color: #384047;
+    padding: 5px;
+}
+
+.user-name{
+	margin-right: 5px;
+	font-size:14px;
+}
+
+.sort-down{
+	border-top: 4px solid #000;
+    border-left: 4px dashed transparent;
+    border-right: 4px dashed transparent;
+    display: inline-block;
+    opacity: .75;
+    vertical-align: middle;
+}
+
+.logout-popup{
+	right: 0;
+	min-width:200px;
+}
+
+.popup{
+	border-radius: 2px;
+	background: #fff;
+    border: 1px solid #ccc;
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    text-align: center;
+	position: absolute;
+	display:none;
+	color:#384047;
+}
+
+.arrow-below:before, .arrow-above:before{
+	content: '';
+    position: absolute;
+	height: 0;
+    width: 0;
+	border-style : solid;
+	border-width: 0 10px 10px;
+	right: 20px;
+    border-color: transparent;
+}
+
+.arrow-below:before{
+	top: -10px;
+	border-bottom-color: #ccc !important;
+}
+
+.arrow-above:before{
+    top: -9px;
+    border-bottom-color: white;
+}
+
+.display{
+	display:block;
+	z-index:99;
+}
+	
+.description{
+	margin:20px;
+    border-bottom: solid 1px #cccccc;
+}
+
+.description .dp{
+	height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.dp img{
+	height:95px;
+	width:95px;
+}
+
+.description .acc-info{
+	margin: 10px 0;
+}
+
+.acc-info>div{
+	line-height:1.5;
+}
+
+.log-out{
+	padding-bottom: 20px;
+}
+
+.log-out-button{
+	line-height: 35px;
+    height: 35px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #384047;
+    font-weight: normal;
+}
+
+.docs-toolbar{
+	padding:0 45px;
+	border-top : 1px solid #ccc;
+	max-height:32px;
+    background: -webkit-linear-gradient(top,#f5f5f5,#eee);
+    position:relative;
+}
+
+.primary-toolbar{
+	width:100%;
+	height:100%;
+	position:relative;
+	cursor: default;
+}
+
+.toolbar-item{
+	display: inline-block;
+    position: relative;
+    line-height: 24px;
+    height:24px;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+    color: #333;
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: transparent;
+    outline: none;
+    margin-top:3px;
+}
+
+.toolbar-item-combo{
+	display: inline-block;
+    position: relative;
+    margin-top:3px;
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.toolbar-item-combo div{
+	height:22px;
+	line-height:22px;
+	margin:0;
+}
+
+.toolbar-item:hover, .toolbar-item-combo:hover{
+	border-color: #c6c6c6;
+}
+
+.no-hover{
+	border:none;
+}
+
+.add-button, #slideMenuButton, .play-button, .view-button, .share-button{
+	border-color: #c6c6c6;
+}
+
+.add-button{
+	padding:6px 6px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+}
+.add-button span{
+	font-size:10px;
+}
+
+.drop-down-button{
+	left:-5px;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	padding:5px 3px;
+}
+.drop-down-button span{
+	font-size:9px;
+}
+
+.save-submit-button{
+	border:none;
+	background:none;
+	outline:none;	
+}
+
+.save-button{
+	top:-1px;
+}
+
+.print-slide, .save-button, .undo, .redo, .left-align, .right-align, .center-align, .justify-align{
+	padding:4px;
+}
+.print-slide span, .save-button span{
+	font-size: 15px;
+}
+
+.color-pack{
+	padding:2px 3px;
+}
+.color-pack span{
+	font-size:18px;
+}
+
+.font-family, .font-size, .line-spacing{
+	padding:3px;
+}
+
+.line-spacing span{
+	top:-3px;
+	position:relative;
+}
+
+#select-font,#select-size, #select-spacing{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button,
+select { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#select-size{
+	width:30px;
+}
+
+.seperator{
+	width: 1px;
+    height: 31px;
+    display: inline-block;
+    background: #aaa;
+   vertical-align:top;
+}
+
+.toolbar-buttons{
+    position: absolute;
+    right: 0;
+    display:inline-block;
+}
+
+.toolbar-buttons a{
+	color:black;
+}
+
+.play-button, .view-button, .share-button{
+	padding: 3px 5px;
+	cursor:pointer;
+}
+
+.play-button span, .view-button span, .share-button span{
+	vertical-align: middle;
+    height: 16px;
+    line-height: 16px;	
+}
+
+.view-button span{
+    color: initial;
+}
+
+/*on click box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    background-color: #eee;
+    border-color: #ccc;*/
+ 
+ /*-----product page body-------*/
+ 
+ .fa.fa-circle{
+	font-size : 12px;
+	color: #000;
+	margin : 0 10px 0 20px;
+}
+.left-container span{
+	font-size : 45px;
+	cursor : pointer;
+}
+
+#document-editor-container{
+	background:#f2f2f2;
+	height:100%;
+	width:100%;
+}	
+
+.slide-container{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow-y:auto;
+}
+
+.left-container{
+	max-width:18%;
+	min-width:18%;
+    overflow: auto;
+	position: absolute;
+    top: 68px;
+    left: 0;
+    bottom: 0;
+}
+
+.thumbnails{
+	margin: 20px 25px;
+	overflow:hidden;
+}
+
+.thumbnails .slide{
+	margin-bottom : 25px;
+	overflow: hidden;
+}
+
+.thumbnails .slide-cover , .thumbnails .slide-content{
+	display : block !important;
+	border: 10px solid #d2d2d2;
+}
+
+.thumbnails .slide-cover.selected , .thumbnails .slide-content.selected{
+	border: 10px solid #929292;
+}
+
+#addSlide{
+	position: fixed;
+	bottom : 40px;
+	left : 185px;
+	z-index: 10;
+}
+
+.fa.fa-close{
+	position:absolute;
+	top:-2px;
+	right:0;
+}
+
+.slide-container .body-seperator{
+	border-left: 1px solid #d1d1d1;
+	width:5px;
+	left: 18%;
+	top: 68px;
+    bottom: 0;
+    position: absolute;
+    overflow: auto;
+}
+
+.right-container{
+	position: absolute;
+    left: 18.40%;
+    top: 68px;
+    right: 0;
+	bottom:0;
+    overflow: auto;
+    padding : 45px 90px;
+}
+ 
+.slide{
+	position:relative;
+	width:100%;
+}
+ 
+.slide-cover, .slide-content{
+	box-shadow : 2px 2px 5px #aaa;
+	background : #fff;
+	width : 100%;
+	height:500px;
+	position-relative;
+}
+
+.slide-cover.selected, .slide-content.selected{
+	display:block;
+}
+
+.slide-cover input, .slide-content input{
+	background:none;
+	border:none;
+	outline:none;
+	padding:10px;
+}
+
+.slide-cover{
+	background :green;
+	display:none;
+}
+.slide-content{
+	position:relative;
+	display:none;
+}
+
+.slide-cover .title, .slide-cover .subtitle{
+	width : 80%;
+	color:white;
+	margin-left : 20px;
+}
+
+.slide-cover .title{
+	font-size : 3.5em;
+	margin-top : 140px;
+}
+
+.slide-cover .subtitle{
+	font-size : 2.5em;
+	margin-top:40px;
+}
+
+.slide-content .title{
+	width : 95%;
+	height: 14%;
+	display : inline-block;
+	font-size : 2.25em;
+	margin : 10px;
+	border-bottom: solid 3px #ff4081;
+}
+
+.slide-content .text{
+	padding:5px;
+	width : 90%;
+	height: 8%;
+	font-size : 1.5em;
+	margin:10px;
+}
+
+.slide-content .footer{
+	height : 12%;
+	background : #ff4081;
+	width : 100%;
+	position : absolute;
+	bottom : 0;
+}
+
+.slide-content .footer input{
+	float:right;
+	margin:8px 8px;
+	font-size : 1em;
+	color:white;
+}
+
+
+
+
+
+

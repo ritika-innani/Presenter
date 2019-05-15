@@ -1,0 +1,241 @@
+@CHARSET "ISO-8859-1";
+
+/*features-page body*/
+
+/*first layer*/
+
+#features-page .first{
+	background:url('../images/features-back.jpg');
+	background-size:cover;
+	border-bottom: solid 1px #e9f0f3;
+    padding-top : 130px; 
+    text-align: center;
+	margin-bottom: 25px;
+    position: relative;
+	padding-bottom:100px;
+	color:#fff;
+}
+
+.features-toggle{
+	position: absolute;
+    bottom: -25px;
+    width: 100%;
+}
+
+.features-toggle-anchor:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.features-toggle-anchor:last-child {
+    border-radius: 0 5px 5px 0;
+    margin-left: -5px;
+}
+
+.features-toggle-anchor {
+    font-size: 16px;
+    margin-right: 0;
+	border: solid 2px #FF4081;
+	display:inline-block;
+	transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.button.primary {
+    margin-top: 30px;
+    background-color: #FF4081;
+    border: solid 2px #FF4081;
+}
+
+
+.features-toggle-anchor.button:not(.primary) {
+    background-color: #fff;
+	color: #FF4081;
+}
+
+.features-toggle-anchor.button.primary:hover {
+    cursor: default;
+}
+
+.features-toggle-anchor.button:hover:not(.primary){
+	color:#E91E63;
+}
+
+/*second layer - who uses container*/
+
+#how-works-container, #who-uses-container{
+	display:none;
+}
+
+#who-uses-container.selected, #how-works-container.selected{
+	display:block;
+}
+
+#who-uses-container .nine h3, #how-works-container .nine h3{
+	margin-top:0;
+}
+
+.svg-container1 {
+	border-radius: 5px;
+    min-height: 178px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    position: relative;
+	background-color: #637a91;
+	overflow:hidden;
+}
+
+#who-uses-container .svg-container1 svg{
+    width: 280px;
+    top: 20px;
+    left: 25%;
+    position: absolute;
+    height: 75px;
+}
+
+#who-uses-container .svg-container1 a{
+	font-size: 14px;
+	font-weight:600;
+    height: 38px;
+    line-height: 34px;
+    padding: 0 26px;
+    bottom: 30px;
+    position: absolute;
+    left: 35%;
+	opacity:0.8;
+	border: solid 2px #fff;
+	border-radius: 4px;
+}
+
+#who-uses-container .svg-container1 a:hover{
+	color:#fff;
+}
+
+#who-uses-container .get-start h1{
+	font-size:45px;
+	color:#717f86
+}
+
+#who-uses-container .get-start a{
+	color:#FF4081;
+	background-color: #fff;
+	border: solid 2px #FF4081;
+    border-radius: 4px;
+	display:inline-block;
+	-webkit-transition : color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+#who-uses-container .get-start a:hover{
+	background-color:#FF4081;
+	color:white;
+}
+
+#mobile-image{
+	height:222px;
+	width:300px;
+	margin-top:25px;
+}
+
+.image-column h4{
+	margin-top:40px;
+}
+
+/*second layer - how works container*/
+
+#how-use-img{
+	width:300px;
+	height:230px;
+}
+
+#how-works-container .using-steps{
+	margin-bottom:70px;
+}
+
+.why-gbp{
+	position:relative;
+}
+
+.why-gbp h1{
+	font-size:40px;
+	position:relative;
+	margin:0;
+	line-height: 1.8;
+}
+
+#how-works-container .block{
+	margin:40px auto;
+	position:relative;
+}
+
+.block .easy{
+    background: url('../images/easy.png') no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.block .draw{
+    background: url('../images/draw.png') no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.block .design{
+    background: url('../images/design.png') no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.block .multi{
+    background: url('../images/multi.png') no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.block .icon-text{
+	position:absolute;
+	top:0;
+	left:130px;
+}
+
+.block .icon-text h4, .block .icon-text p{
+	margin:0;
+	text-align:left;
+}
+
+#how-works-container .icon{
+	-webkit-transition : 0.3s;
+}
+
+.block:hover>.twelve>.icon{
+	-webkit-transform : scale(1.1) rotate(5deg);
+} 
+
+#how-works-container .tools-list{
+	margin-top:40px;
+}
+
+.tools-list .tools-items{
+	width:33.33%;
+	float: left;
+    padding: 0 15px 0 15px;
+    margin-bottom: 50px;
+	position:relative;
+}
+
+.tools-list .tools-items span{
+	font-size: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+}
+
+.tools-list .tools-items h5{
+	margin:0;
+}
+
+.tools-list .tools-items p{
+	font-size:16px;
+	margin:0;
+}
+
+.tools-list .tools-items-content{
+	padding-left:45px;
+}

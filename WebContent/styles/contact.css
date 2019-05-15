@@ -1,0 +1,124 @@
+@CHARSET "ISO-8859-1";
+
+/* contact page styling */
+
+#contact-page .first{
+	background: url('../images/contact-back3.jpg');
+	background-size:cover;
+	min-height:620px;
+}
+
+#contact-page .first .main-heading, #contact-page .second .main-heading{
+	margin:0 auto;
+}
+
+#contact-page .first h1{
+	font-size:80px;
+	color:#FF4081;
+	margin-top:90px;
+}
+
+#contact-page .first h3{
+	color:#ffffff;
+	font-size:35px;
+}
+
+#contact-page .second h3{
+	color:#8BC34A;
+	font-size:45px;
+}
+
+#contact-page .second .main-heading h3{
+	margin-top:30px;
+}
+
+#contact-page .first a{
+	margin-top: 30px;
+	display: inline-block;
+    border: solid 1px #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+	position:relative;
+	cursor:pointer;
+	
+}
+   
+#contact-page .first a span{	
+    line-height: 1.4;
+    padding: 5px;
+    color: white;
+	position: absolute;
+    left: 6px;
+}
+
+#contact-page .first a #arrow{
+	-webkit-animation: arrow 0.5s ease-in 1s infinite alternate;
+}
+
+@-webkit-keyframes arrow{
+	
+	20%{
+		top : 1px;
+	}
+	40%{
+		top : 2px;
+	}
+	60%{
+		top : 3px;
+	}
+	80%{
+		top : 4px;
+	}
+	100%{
+		top : 5px;
+	}
+}
+
+#contact-page .second{
+	min-height:620px;
+}
+
+.contactform input[type="text"], .contactform input[type="number"], .contactform input[type="email"]{
+	width :90%;
+	outline : none;
+	border : none;
+	margin : 10px auto;
+	border-bottom : solid thin #ddd;
+	padding : 5px 10px;
+	font-size : 20px;
+	background:none;
+	transition : 0.3s;
+}
+
+.contactform input[type="text"]:focus, .contactform input[type="number"]:focus, .contactform input[type="email"]:focus{
+	border-bottom : solid thin #999;
+}
+
+.contactform textarea{
+	width : 90%;
+	height : 170px;
+	padding : 10px;
+	margin : 40px auto;
+	font-size :20px;
+	resize : none;
+	outline:none;
+	border : solid thin #ddd;
+}
+
+.contactform .contact-form-button{
+	background:#8BC34A;
+	color:#fff;
+	width:15%;
+	border-color: #8BC34A;
+}
+
+.emailus h3{
+	font-size:30px;
+	color:#FF4081;
+	margin-top:30px;
+}
+
+.emailus h4{
+	color: #576366;
+}
